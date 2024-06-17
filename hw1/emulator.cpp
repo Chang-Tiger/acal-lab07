@@ -1098,10 +1098,7 @@ void execute(uint8_t *mem, instr *imem, label_loc *labels, int label_count, bool
     		uint64_t unsigned_64 = (uint64_t)unsigned_val;
 			int64_t tmp = signed_64 * (int64_t)unsigned_64;
 			rf[i.a1.reg] = (uint32_t)(tmp >> 32);
-			//int64_t signed_operand = (int32_t)rf[i.a2.reg]; // 将第一个操作数视为有符号整数
-			//uint64_t unsigned_operand = (uint64_t)rf[i.a3.reg]; // 将第二个操作数视为无符号整数
-			//int128_t tmp = (int128_t)signed_operand * (int128_t)unsigned_operand; // 进行乘法运算
-			//rf[i.a1.reg] = (uint32_t)(tmp >> 32); // 将高位部分存储到目的寄存器中
+			
 			break;
 		}
 		case REM:
